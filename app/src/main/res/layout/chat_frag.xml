@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:background="@drawable/back1"
+	android:layout_height="fill_parent" >
+
+	<ListView
+		android:id="@android:id/list"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll"
+		android:layout_weight="1.0"
+        android:divider="@null"
+		android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        android:layout_above="@+id/edit_input" />
+
+
+	    <com.rockerhieu.emojicon.EmojiconEditText
+		    android:id="@+id/edit_input"
+		    android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+		    android:layout_weight="1.0"
+            android:layout_gravity="left"
+            android:layout_marginTop="10dp"
+		    android:hint="text here"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/btn_send"
+            android:layout_toStartOf="@+id/btn_send">
+	    </com.rockerhieu.emojicon.EmojiconEditText>
+
+    <RelativeLayout
+        android:id="@+id/hidden_panel"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@android:color/white"
+        android:visibility="gone" >
+    </RelativeLayout>
+
+        <ImageButton
+		    android:id="@+id/btn_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+		    android:layout_gravity="right"
+            android:src="@drawable/ic_action_send_now"
+            android:text="Send"
+            android:layout_alignBottom="@+id/edit_input"
+            android:layout_toLeftOf="@+id/use_system_default"
+            android:layout_toStartOf="@+id/use_system_default" />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/customcheckbox"
+        android:id="@+id/use_system_default"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+</RelativeLayout>
